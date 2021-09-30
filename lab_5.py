@@ -22,11 +22,14 @@ print("Сумма расстояний = ", rasac + rasbc)
 #number 3
 print("Введите три точки a, b, c для рассчета расстояний между ними :")
 a, b, c = int(input()), int(input()), int(input())
-rasac = abs(c - a)
-rasbc = abs(c - b)
-print("Расстояние от точки до точки A до C = ", rasac) 
-print("Расстояние от точки до точки B до C = ", rasbc) 
-print("Произведение расстояний = ", rasac * rasbc)
+if (c < b) and (c > a):
+    rasac = abs(c - a)
+    rasbc = abs(c - b)
+    print("Расстояние от точки до точки A до C = ", rasac) 
+    print("Расстояние от точки до точки B до C = ", rasbc) 
+    print("Произведение расстояний = ", rasac * rasbc)
+else:
+    print("Точка C не соответствует условию.")
 
 
 #number 4
@@ -46,8 +49,3 @@ x2, y2 = int(input()), int(input())
 x3, y3 = int(input()), int(input())
 plosh = 0.5 * abs((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1))
 print("Площадь треугольника S = ", plosh) 
-
-
-
-
-
